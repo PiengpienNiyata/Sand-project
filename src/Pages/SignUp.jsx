@@ -112,7 +112,7 @@ function SignUp() {
                       id="email"
                       className={
                         ErrorMessage
-                          ? "bg-stone-700 text-white sm:text-sm rounded-sm border-2 border-red-700 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:text-white "
+                          ? "bg-stone-700 text-white sm:text-sm rounded-sm border-2 border-green-700 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:text-white "
                           : "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:text-white "
                       }
                       placeholder="name@emil.com"
@@ -134,7 +134,7 @@ function SignUp() {
                       placeholder="••••••••"
                       className={
                         ErrorMessage
-                          ? "bg-stone-700 text-white sm:text-sm rounded-sm border-2 border-red-700 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                          ? "bg-stone-700 text-white sm:text-sm rounded-sm border-2 border-green-700 focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                           : "bg-stone-700 text-white sm:text-sm rounded-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:text-white"
                       }
                       required=""
@@ -142,7 +142,7 @@ function SignUp() {
                   </div>
                   <div>
                     {ErrorMessage && (
-                      <h1 className="flex text-white font-bold p-4 bg-red-700 rounded text-center">
+                      <h1 className="flex text-white font-bold p-4 bg-green-700 rounded text-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -185,7 +185,7 @@ function SignUp() {
                     className={`w-full text-white ${
                       loader
                         ? `bg-stone-700`
-                        : `bg-red-800 focus:ring-4 focus:outline-none focus:ring-primary-300`
+                        : `bg-green-800 focus:ring-4 focus:outline-none focus:ring-primary-300`
                     } font-medium rounded-sm text-sm px-5 py-2.5 text-center`}
                   >
                     {loader ? <ClipLoader color="#2A6354" /> : "Create now"}
