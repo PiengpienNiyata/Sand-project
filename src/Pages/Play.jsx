@@ -131,7 +131,7 @@ function Play() {
               </h1>
               <StarRatings
                 rating={movieDetails.vote_average / 2}
-                starRatedColor="red"
+                starRatedColor="green"
                 numberOfStars={5}
                 name="rating"
                 starDimension="1rem"

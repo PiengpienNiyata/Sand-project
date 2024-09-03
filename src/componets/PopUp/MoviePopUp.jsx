@@ -154,7 +154,7 @@ function MoviePopUp(props) {
                             {PopupInfo.vote_average && (
                               <StarRatings
                                 rating={PopupInfo.vote_average / 2}
-                                starRatedColor="red"
+                                starRatedColor="green"
                                 numberOfStars={5}
                                 name="rating"
                                 starDimension="1rem"

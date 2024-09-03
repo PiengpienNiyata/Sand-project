@@ -273,7 +273,7 @@ function RowPost(props) {
                       <div className="ml-4">
                         <StarRatings
                           rating={obj.vote_average / 2}
-                          starRatedColor="red"
+                          starRatedColor="green"
                           numberOfStars={5}
                           name="rating"
                           starDimension="0.8rem"
@@ -437,7 +437,7 @@ function RowPost(props) {
                             <div className="ml-2">
                               <StarRatings
                                 rating={moviePopupInfo.vote_average / 2}
-                                starRatedColor="red"
+                                starRatedColor="green"
                                 numberOfStars={5}
                                 name="rating"
                                 starDimension="1rem"

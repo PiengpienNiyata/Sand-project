@@ -253,7 +253,7 @@ function UserMovieSection(props) {
                       <br></br>
                       <StarRatings
                         rating={movie.vote_average / 2}
-                        starRatedColor="red"
+                        starRatedColor="green"
                         numberOfStars={5}
                         name="rating"
                         starDimension="1.2rem"
@@ -279,7 +279,7 @@ function UserMovieSection(props) {
             <div>
               <div className="w-[100vw] h-[70vh] flex justify-center items-center">
                 {!isResultEmpty ? (
-                  <ClipLoader color="#ff0000" size={160} />
+                  <ClipLoader color="#2A6354" size={160} />
                 ) : (
                   <div>
                     <h1 className="text-white text-5xl text-center">
