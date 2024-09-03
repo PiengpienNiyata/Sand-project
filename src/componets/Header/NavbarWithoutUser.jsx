@@ -21,21 +21,21 @@ function NavbarWithoutUser() {
   return (
     <div>
       <header
-        className={`fixed z-50 w-full flex items-center py-4 transition duration-500 ease-in-out ${
-          show && "bg-black transition duration-500 ease-in-out"
-        }`}
+        className={`fixed z-50 w-full flex items-center py-4 transition duration-500 ease-in-out ${show && "bg-black transition duration-500 ease-in-out"
+          }`}
       >
         <div className="w-9/12 md:w-11/12">
           <img
             className="h-8 sm:h-10 sm:w-18 ml-8 cursor-pointer"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
-            alt="NETFLIX"
+            src="src/images/Sand-logo.png"
+            alt="SAND"
           />
         </div>
 
         <div>
           <Link to="/signin">
-            <button className="bg-red-600 px-8 rounded-sm py-2 text-white text-base font-bold mr-4 lg:mr-0">
+            <button style={{ backgroundColor: '#2A6354' }}
+              className="px-8 rounded-sm py-2 text-white text-base font-bold mr-4 lg:mr-0">
               Login
             </button>
           </Link>

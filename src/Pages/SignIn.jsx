@@ -130,9 +130,6 @@ function SignIn() {
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl dark:text-white">
                   Sign in to your account
                 </h1>
-                <h1 className="text-white text-2xl p-3 text-center border-2 border-red-700 rounded-sm">
-                  Not Real Netflix
-                </h1>
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-4 md:space-y-6"
@@ -232,23 +229,7 @@ function SignIn() {
                   >
                     {loader ? <ClipLoader color="#2A6354" /> : `Sign in`}
                   </button>
-                  <button
-                    onClick={loginWithGoogle}
-                    className={`flex justify-center items-center w-full text-white ${
-                      loader
-                        ? `bg-stone-700`
-                        : `bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300`
-                    } transition ease-in-out font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:focus:ring-primary-800`}
-                  >
-                    {loader ? (
-                      <ClipLoader color="#2A6354" />
-                    ) : (
-                      <>
-                        <img className="w-8" src={GoogleLogo}></img>{" "}
-                        <p className="ml-1">Sign in with Google</p>
-                      </>
-                    )}
-                  </button>
+                  
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Don’t have an account yet?{" "}
                     <Link

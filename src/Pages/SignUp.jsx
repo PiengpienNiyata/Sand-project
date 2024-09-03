@@ -93,9 +93,6 @@ function SignUp() {
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl dark:text-white">
                   Create a new account
                 </h1>
-                <h1 className="text-white text-2xl p-3 text-center border-2 border-red-700 rounded-sm">
-                  Not Real Netflix
-                </h1>
                 <form
                   onSubmit={handleSubmit}
                   className="space-y-4 md:space-y-6"

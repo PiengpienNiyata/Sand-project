@@ -61,9 +61,8 @@ function Navbar(props) {
         }
       >
         <nav
-          className={`transition duration-500 ease-in-out  ${
-            show && "transition duration-500 ease-in-out bg-black "
-          } `}
+          className={`transition duration-500 ease-in-out  ${show && "transition duration-500 ease-in-out bg-black "
+            } `}
         >
           <div className="px-4 mx-auto max-w-8xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -71,43 +70,43 @@ function Navbar(props) {
                 <div className="flex-shrink-0">
                   <img
                     className="h-6 cursor-pointer w-18"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
-                    alt="NETFLIX"
+                    src="src/images/Sand-logo.png"
+                    alt="SAND"
                   />
                 </div>
                 <div className="hidden md:block">
                   <div className="flex items-center ml-10 space-x-4">
                     <Link
                       to={"/"}
-                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-red-800 lg:px-3 text-m"
+                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
                       Home
                     </Link>
 
                     <Link
                       to={"/series"}
-                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-red-800 lg:px-3 text-m"
+                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
                       Series
                     </Link>
 
                     <Link
                       to={"/history"}
-                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-red-800 lg:px-3 text-m"
+                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
                       History
                     </Link>
 
                     <Link
                       to={"/liked"}
-                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-red-800 lg:px-3 text-m"
+                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
                       Liked
                     </Link>
 
                     <Link
                       to={"/mylist"}
-                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-red-800 lg:px-3 text-m"
+                      className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
                       My List
                     </Link>
@@ -121,7 +120,7 @@ function Navbar(props) {
                   <Link to={"/search"}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="items-center w-10 h-10 pr-4 mt-auto mb-auto text-white hover:text-red-800 cursor-pointer"
+                      className="items-center w-10 h-10 pr-4 mt-auto mb-auto text-white hover:text-green-800 cursor-pointer"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -136,7 +135,7 @@ function Navbar(props) {
                   </Link>
 
                   {User ? (
-                    <a className="items-center hidden pr-4 mt-auto mb-auto text-base font-medium text-white transition ease-in-out delay-150 cursor-pointer hover:text-red-800 md:flex">
+                    <a className="items-center hidden pr-4 mt-auto mb-auto text-base font-medium text-white transition ease-in-out delay-150 cursor-pointer hover:text-green-800 md:flex">
                       {User.displayName}
                     </a>
                   ) : null}
@@ -164,7 +163,7 @@ function Navbar(props) {
                         src={
                           profilePic
                             ? `${User.photoURL}`
-                            : `https://www.citypng.com/public/uploads/preview/profile-user-round-red-icon-symbol-download-png-11639594337tco5j3n0ix.png`
+                            : `https://www.citypng.com/public/uploads/preview/profile-user-round-green-icon-symbol-download-png-11639594337tco5j3n0ix.png`
                         }
                         alt="NETFLIX"
                       />
@@ -173,7 +172,7 @@ function Navbar(props) {
                       <li>
                         <Link
                           to={"/profile"}
-                          className="cursor-pointer rounded-t bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-red-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer rounded-t bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Profile
                         </Link>
@@ -181,7 +180,7 @@ function Navbar(props) {
                       <li>
                         <Link
                           to={"/signin"}
-                          className="cursor-pointer bg-stone-900 font-semibold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-red-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer bg-stone-900 font-semibold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Add another User
                         </Link>
@@ -189,7 +188,7 @@ function Navbar(props) {
                       <li>
                         <a
                           onClick={SignOut}
-                          className="cursor-pointer rounded-b bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-red-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer rounded-b bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Sign Out
                         </a>
@@ -261,44 +260,45 @@ function Navbar(props) {
               <div className="md:hidden" id="mobile-menu">
                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <Link to={"/"}>
-                    <a className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-red-800">
+                    <a className="block px-3 py-2 text-base font-medium text-white rounded-md hover:bg-green-800">
                       Home
                     </a>
                   </Link>
 
                   <Link to={"/series"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       TV-Series
                     </a>
                   </Link>
 
                   <Link to={"/history"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       History
                     </a>
                   </Link>
 
                   <Link to={"/liked"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       Liked
                     </a>
                   </Link>
 
                   <Link to={"/mylist"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       My-List
                     </a>
                   </Link>
 
                   <Link to={"/signin"}>
-                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white">
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       Add another user
                     </a>
                   </Link>
 
                   <a
                     onClick={SignOut}
-                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-red-800 hover:text-white"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:text-white"
+                    style={{ backgroundColor: '#2A6354' }}
                   >
                     Sign Out
                   </a>
