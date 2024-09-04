@@ -47,7 +47,7 @@ function useUpdateLikedMovies() {
         style: {
           padding: "1.5rem",
           backgroundColor: Error ? "#fff4f4" : "#f4fff4",
-          borderLeft: Error ? "6px solid red" : "6px solid lightgreen",
+          borderLeft: Error ? "6px solid green" : "6px solid lightgreen",
         },
       }}
     />
