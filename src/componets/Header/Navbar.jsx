@@ -163,7 +163,7 @@ function Navbar(props) {
                         src={
                           profilePic
                             ? `${User.photoURL}`
-                            : `https://www.citypng.com/public/uploads/preview/profile-user-round-green-icon-symbol-download-png-11639594337tco5j3n0ix.png`
+                            : `https://i.ibb.co/7Xhszjk/southboy.jpg`
                         }
                         alt="SAND-project"
                       />

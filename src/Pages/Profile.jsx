@@ -167,7 +167,7 @@ function Profile() {
                 src={
                   profilePic
                     ? `${profilePic}`
-                    : `https://www.citypng.com/public/uploads/preview/profile-user-round-red-icon-symbol-download-png-11639594337tco5j3n0ix.png`
+                    : `https://i.ibb.co/7Xhszjk/southboy.jpg`
                 }
                 alt="SAND-project"
               />
@@ -200,38 +200,39 @@ function Profile() {
                   <img
                     onClick={() =>
                       updateProfilePic(
-                        "https://i.pinimg.com/originals/ba/2e/44/ba2e4464e0d7b1882cc300feceac683c.png"
+                        "https://i.ibb.co/ZKjF7Sq/Paeng.jpg "
                       )
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
-                    src="https://i.pinimg.com/originals/ba/2e/44/ba2e4464e0d7b1882cc300feceac683c.png"
+                    src="https://i.ibb.co/ZKjF7Sq/Paeng.jpg "
                   />
                   <img
                     onClick={() =>
                       updateProfilePic(
-                        "https://i.pinimg.com/736x/db/70/dc/db70dc468af8c93749d1f587d74dcb08.jpg"
+                        "https://i.ibb.co/tKrCFv1/Monthone.jpg"
                       )
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
-                    src="https://i.pinimg.com/736x/db/70/dc/db70dc468af8c93749d1f587d74dcb08.jpg"
+                    src="https://i.ibb.co/tKrCFv1/Monthone.jpg"
+                    //d
                   />
                   <img
                     onClick={() =>
                       updateProfilePic(
-                        "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                        "https://i.ibb.co/4WVw9CS/Esan.jpg"
                       )
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                    src="https://i.ibb.co/4WVw9CS/Esan.jpg"
                   />
                   <img
                     onClick={() =>
                       updateProfilePic(
-                        "https://ih0.redbubble.net/image.618363037.0853/flat,1000x1000,075,f.u2.jpg"
+                        "https://i.ibb.co/cvBPq5X/Noey.jpg"
                       )
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
-                    src="https://ih0.redbubble.net/image.618363037.0853/flat,1000x1000,075,f.u2.jpg"
+                    src="https://i.ibb.co/cvBPq5X/Noey.jpg"
                   />
                   <input
                     style={{ display: "none" }}
@@ -333,3 +334,13 @@ function Profile() {
 }
 
 export default Profile;
+
+/* https://ibb.co/xh7KPwg
+https://i.ibb.co/4WVw9CS/Esan.jpg
+https://ibb.co/fFw0LyT
+https://i.ibb.co/tKrCFv1/Monthone.jpg
+https://ibb.co/wLkTtHr
+https://i.ibb.co/cvBPq5X/Noey.jpg
+https://ibb.co/gw2fhdk 
+https://i.ibb.co/ZKjF7Sq/Paeng.jpg 
+*/
