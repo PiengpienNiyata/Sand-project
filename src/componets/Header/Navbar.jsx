@@ -165,7 +165,7 @@ function Navbar(props) {
                             ? `${User.photoURL}`
                             : `https://www.citypng.com/public/uploads/preview/profile-user-round-green-icon-symbol-download-png-11639594337tco5j3n0ix.png`
                         }
-                        alt="NETFLIX"
+                        alt="SAND-project"
                       />
                     </Link>
                     <ul class="absolute hidden text-white pt-1 -ml-32 group-hover:block transition ease-in-out delay-150">
