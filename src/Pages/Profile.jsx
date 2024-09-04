@@ -335,12 +335,3 @@ function Profile() {
 
 export default Profile;
 
-/* https://ibb.co/xh7KPwg
-https://i.ibb.co/4WVw9CS/Esan.jpg
-https://ibb.co/fFw0LyT
-https://i.ibb.co/tKrCFv1/Monthone.jpg
-https://ibb.co/wLkTtHr
-https://i.ibb.co/cvBPq5X/Noey.jpg
-https://ibb.co/gw2fhdk 
-https://i.ibb.co/ZKjF7Sq/Paeng.jpg 
-*/

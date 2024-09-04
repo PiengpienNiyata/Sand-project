@@ -27,7 +27,7 @@ function NavbarWithoutUser() {
         <div className="w-9/12 md:w-11/12">
           <img
             className="h-8 sm:h-10 sm:w-18 ml-8 cursor-pointer"
-            src="src/images/Sand-logo.png"
+            src="https://i.ibb.co/n8gCxyK/cdbd6b3d5ce53506505c02d7173ccc14-1.png"
             alt="SAND"
           />
         </div>

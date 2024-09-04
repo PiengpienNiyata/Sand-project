@@ -4,9 +4,6 @@ import { useEffect } from "react";
 import Footer from "../componets/Footer/Footer";
 
 import WelcomePageImage1 from "../images/WelcomePageImage1.png";
-import WelcomePageImage2 from "../images/WelcomePageImage2.png";
-import WelcomePageImage3 from "../images/WelcomePageImage3.png";
-import WelcomePageImage4 from "../images/WelcomePageImage4.png";
 import WelcomePageBanner from "../images/WelcomePageBanner.jpg";
 
 import { Fade } from "react-reveal";
@@ -30,14 +27,13 @@ function Welcome() {
           <div className="w-10/12 text-center sm:w-11/12 md:w-40rem">
             <Fade duration={2000}>
               <h1 className="mb-3 text-3xl font-semibold text-center text-white sm:text-4xl md:text-6xl">
-                Unlimited movies, TV shows and more.
+                SAND PROJECT
               </h1>
               <h1 className="mb-4 text-xl text-center text-stone-400 font-light sm:text-2xl">
-                Watch anywahere.Cancel anytime
+                SANAM AROM NONG DEARN
               </h1>
               <h1 className="mb-2 text-center text-stone-400 font-light sm:text-xl sm:mb-8">
-                Ready to watch? Enter your email to create or restart your
-                membership.
+                A website for movie lovers and a place for SANAM AROM NONG DEARN.
               </h1>
               <div>
                 <input
@@ -45,9 +41,9 @@ function Welcome() {
                   className="w-full p-2 py-3 rounded-sm sm:py-4 md:py-5 md:w-3/4"
                 />
                 <Link to={"/signup"}>
-                  <button 
-                  style={{ backgroundColor: '#2A6354' }} 
-                  className="px-4 py-2 mt-3 font-medium text-white rounded-sm sm:py-4 md:mt-0 md:pb-5 md:text-xl md:w-1/4">
+                  <button
+                    style={{ backgroundColor: '#2A6354' }}
+                    className="px-4 py-2 mt-3 font-medium text-white rounded-sm sm:py-4 md:mt-0 md:pb-5 md:text-xl md:w-1/4">
                     Get Started
                   </button>
                 </Link>
@@ -85,74 +81,30 @@ function Welcome() {
         </Fade>
       </section>
 
-      {/* Section 3 */}
-      <section className="bg-black">
-        <Fade>
-          <div className="flex justify-center">
-            <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:w-9/12">
-              <div className="flex justify-center">
-                <img className="" src={WelcomePageImage2} />
-              </div>
-              <div>
-                <h1 className="mx-4 mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Download your shows to watch offline.
-                </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Save your favourites easily and always have something to
-                  watch.
-                </h1>
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </section>
 
-      {/* Section 4 */}
-      <section className="bg-black border-y-8 border-y-zinc-800">
-        <Fade>
-          <div className="flex justify-center md:py-8">
-            <div className="lg:flex lg:items-center lg:w-9/12">
-              <div>
-                <h1 className="mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Watch everywhere.
-                </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Stream unlimited movies and TV shows on your phone, tablet,
-                  laptop, and TV.
-                </h1>
-              </div>
-              <div className="flex justify-center">
-                <img className="" src={WelcomePageImage3} />
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </section>
-
-      {/* Section 5 */}
-      <section className="bg-black">
-        <Fade>
-          <div className="flex justify-center">
-            <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:w-9/12">
-              <div className="flex justify-center">
-                <img className="" src={WelcomePageImage4} />
-              </div>
-              <div>
-                <h1 className="mt-4 mb-6 text-4xl font-semibold text-center text-white lg:mt-0 lg:text-left lg:ml-8 lg:text-5xl xl:text-6xl">
-                  Create profiles for children.
-                </h1>
-                <h1 className="m-4 text-center text-stone-400 font-light lg:text-left lg:ml-8 lg:text-2xl lg:w-9/12">
-                  Send children on adventures with their favourite characters in
-                  a space made just for them—free with your membership.
-                </h1>
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </section>
 
       {/* Section 6 */}
-      <section></section>
+      <section>
+        <div
+          style={{
+            background: `linear-gradient(0deg, hsl(0deg 0% 0% / 73%) 0%, hsl(0deg 0% 0% / 73%) 35%), url(${WelcomePageBanner})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          className="h-[32rem] w-full sm:h-[65vh] xl:h-[80vh] bg-slate-800 relative flex items-center justify-center"
+        >
+          <ul className="mb-4 text-xl text-center text-stone-400 font-light sm:text-2xl">
+            <li>662110182 นางสาวกัญชรส มีรัตน์</li>
+            <li>662110198 นางสาวเพียงเพียร นิยะตะ</li>
+            <li>662110199 นายภัทรดนัย ยศบุญ</li>
+            <li>662110205 นางสาวสุชญา อนุชปรีดา</li>
+          </ul>
+
+        </div>
+
+
+      </section>
 
       {/* Footer */}
       <Footer></Footer>
