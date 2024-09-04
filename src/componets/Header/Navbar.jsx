@@ -70,7 +70,7 @@ function Navbar(props) {
                 <div className="flex-shrink-0">
                   <img
                     className="h-6 cursor-pointer w-18"
-                    src="src/images/Sand-logo.png"
+                    src="https://i.ibb.co/n8gCxyK/cdbd6b3d5ce53506505c02d7173ccc14-1.png"
                     alt="SAND"
                   />
                 </div>
@@ -87,7 +87,7 @@ function Navbar(props) {
                       to={"/series"}
                       className="py-2 font-medium text-white transition ease-in-out delay-150 rounded-md cursor-pointer hover:text-green-800 lg:px-3 text-m"
                     >
-                      Series
+                      Genre
                     </Link>
 
                     <Link
@@ -172,7 +172,7 @@ function Navbar(props) {
                       <li>
                         <Link
                           to={"/profile"}
-                          className="cursor-pointer rounded-t bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer rounded-t bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#2A635456] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Profile
                         </Link>
@@ -180,7 +180,7 @@ function Navbar(props) {
                       <li>
                         <Link
                           to={"/signin"}
-                          className="cursor-pointer bg-stone-900 font-semibold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer bg-stone-900 font-semibold hover:border-l-4 hover:bg-gradient-to-r from-[#2A635456] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Add another User
                         </Link>
@@ -188,7 +188,7 @@ function Navbar(props) {
                       <li>
                         <a
                           onClick={SignOut}
-                          className="cursor-pointer rounded-b bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#ff000056] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
+                          className="cursor-pointer rounded-b bg-stone-900 font-bold hover:border-l-4 hover:bg-gradient-to-r from-[#2A635456] border-green-800 py-2 px-4 block whitespace-no-wrap transition ease-in-out delay-150"
                         >
                           Sign Out
                         </a>
