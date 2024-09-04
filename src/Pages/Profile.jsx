@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { getAuth, updateProfile, signOut } from "firebase/auth";
+import { getAuth, updateProfile, signOut, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
 import { db } from "../Firebase/FirebaseConfig";
 import {
   ref,
@@ -27,6 +27,9 @@ function Profile() {
   const [isUserNameChanged, setIsUserNameChanged] = useState(false);
   const [userName, setUserName] = useState("");
   const [isMyListUpdated, setisMyListUpdated] = useState(false);
+  const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
 
   const navigate = useNavigate();
 
@@ -122,6 +125,33 @@ function Profile() {
       });
   };
 
+  const handlePasswordChange = (e) => {
+    e.preventDefault();
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (newPassword !== confirmNewPassword) {
+      toast.error("New passwords do not match!");
+      return;
+    }
+
+    const credential = EmailAuthProvider.credential(user.email, oldPassword);
+
+    reauthenticateWithCredential(user, credential)
+      .then(() => {
+        return updatePassword(user, newPassword);
+      })
+      .then(() => {
+        toast.success("Password updated successfully!");
+        setOldPassword("");
+        setNewPassword("");
+        setConfirmNewPassword("");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
   const SignOut = () => {
     const auth = getAuth();
     signOut(auth)
@@ -193,6 +223,32 @@ function Profile() {
                 </h1>
                 <hr className="h-px bg-gray-500 border-0 mb-4 md:mb-10 dark:bg-gray-700"></hr>
 
+
+                {/* Change Password Section */}
+                <h1 className="text-white text-lg font-medium mb-2">
+                  Change Password
+                </h1>
+                <input
+                  type="password"
+                  placeholder="Old Password"
+                  value={oldPassword}
+                  onChange={(e) => setOldPassword(e.target.value)}
+                  className="block w-full rounded-md bg-stone-900 text-white border-gray-300 p-2 mb-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-base"
+                />
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  className="block w-full rounded-md bg-stone-900 text-white border-gray-300 p-2 mb-4 focus:border-indigo-500 focus:ring-indigo-500 sm:text-base"
+                />
+                <input
+                  type="password"
+                  placeholder="Confirm New Password"
+                  value={confirmNewPassword}
+                  onChange={(e) => setConfirmNewPassword(e.target.value)}
+                  className="block w-full rounded-md bg-stone-900 text-white border-gray-300 p-2 mb-6 focus:border-indigo-500 focus:ring-indigo-500 sm:text-base"
+                />
                 <h1 className="text-white text-lg font-medium mb-4">
                   Who is Watching ?
                 </h1>
@@ -214,7 +270,7 @@ function Profile() {
                     }
                     className="w-16 h-16 rounded-md cursor-pointer"
                     src="https://i.ibb.co/tKrCFv1/Monthone.jpg"
-                    //d
+                  //d
                   />
                   <img
                     onClick={() =>
@@ -282,9 +338,10 @@ function Profile() {
                 </svg>
                 SignOut
               </button>
-              {userName != "" || newProfielPic != "" ? (
+              {userName != "" || newProfielPic != "" || oldPassword != ""? (
                 <button
-                  onClick={changeUserName}
+                  onClick={changeUserName || handlePasswordChange}
+                  
                   className="flex items-center bg-green-700 text-white font-medium sm:font-bold text-xs px-10 md:px-16 md:text-xl  py-3 rounded shadow hover:shadow-lg hover:bg-white hover:text-green-700 outline-none focus:outline-none mr-3 mb-1 ease-linear transition-all duration-150"
                 >
                   <svg
@@ -301,7 +358,7 @@ function Profile() {
                       d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
                     />
                   </svg>
-                  Save and continue
+                  Save
                 </button>
               ) : (
                 <button
