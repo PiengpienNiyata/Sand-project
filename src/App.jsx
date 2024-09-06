@@ -13,6 +13,7 @@ const ErrorPage = lazy(() => import("./Pages/ErrorPage"));
 const Play = lazy(() => import("./Pages/Play"));
 const LikedMovies = lazy(() => import("./Pages/LikedMovies"));
 const History = lazy(() => import("./Pages/History"));
+const EditMovie = lazy(() => import("./Pages/Editmovie"));
 const Admin = lazy(() => import("./Pages/Admin"));
 const AdminSignIn = lazy(() => import("./Pages/AdminSignIn"));
 const NewProduct = lazy(() => import("./Pages/NewProduct"));
@@ -50,6 +51,8 @@ function App() {
               <Route path="/mylist" element={<MyList />} />
               <Route path="/liked" element={<LikedMovies />} />
               <Route path="/history" element={<History />} />
+              <Route path="/Editmovie" element={<EditMovie />} />
+
               <Route path="/Admin" element={<Admin />} />
               <Route path="/Users" element={<Users />} />
               <Route path="/NewProduct" element={<NewProduct />} />
@@ -59,7 +62,7 @@ function App() {
           <Route path="/play/:id" element={<Play />} />
 
           <Route path="/AdminSignIn" element={<AdminSignIn />} />
-          
+
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<ErrorPage />} />

@@ -43,9 +43,7 @@ export default function Admin() {
           </Link>
         </div>
         <div className="flex items-center gap-4">
-          <span>
-            
-          </span>
+          
           <Link className="hover:text-white" to="/ ">
             Logout
           </Link>
@@ -61,6 +59,12 @@ export default function Admin() {
               <VideoIcon className="h-6 w-6" />
               <Link className="hover:text-gray-300" to="/NewProduct">
                 Movies
+              </Link>
+            </div>
+            <div className="flex items-center gap-2">
+              <VideoIcon className="h-6 w-6" />
+              <Link className="hover:text-gray-300" to="/Editmovie">
+                Edit movies
               </Link>
             </div>
             <div className="flex items-center gap-2">

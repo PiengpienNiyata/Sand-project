@@ -1,0 +1,68 @@
+/* Container for the Edit Movie Form */
+.edit-movie-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2a6354; /* Matches header background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  /* Style for labels */
+  .edit-movie-form label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #f3f4f6;
+  }
+  
+  /* Style for input and textarea fields */
+  .edit-movie-form input,
+  .edit-movie-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #374151;
+    color: #f3f4f6;
+  }
+  
+  /* Focus style for input and textarea fields */
+  .edit-movie-form input:focus,
+  .edit-movie-form textarea:focus {
+    outline: none;
+    background-color: #4b5563;
+  }
+  
+  /* Style for textarea specifically */
+  .edit-movie-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Style for buttons */
+  .edit-movie-form button {
+    padding: 12px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Hover effect for buttons */
+  .edit-movie-form button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Heading style */
+  .edit-movie-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f3f4f6;
+    text-align: center;
+  }
+  

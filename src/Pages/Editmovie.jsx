@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { db } from "../Firebase/FirebaseConfig";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import toast, { Toaster } from "react-hot-toast";
-import "./users.css"; // Import your CSS file
+import "./editmovie.css"; // Import your CSS file
 
 // Components for Buttons and Cards
 const Button = ({ children, variant = "default", ...props }) => {
   const baseStyles = "px-4 py-2 font-semibold text-white rounded";
   const variantStyles =
     variant === "default"
-      ? "bg-blue-500 hover:bg-blue-600"
+      ? "bg-red-500 hover:bg-red-600"  // Changed color to red for delete button
       : "bg-gray-500 hover:bg-gray-600";
 
   return (
@@ -32,37 +32,37 @@ const CardTitle = ({ children }) => (
 
 const CardContent = ({ children }) => <div className="card-content">{children}</div>;
 
-// Main Admin Component
-export default function Users() {
-  const [users, setUsers] = useState([]);
+// Main Movie Component
+export default function editmovie() {
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
 
-    const fetchUsers = async () => {
+    const fetchMovies = async () => {
       try {
-        console.log("Fetching users...");
-        const usersRef = collection(db, "Users");
-        const querySnapshot = await getDocs(usersRef);
-        const usersData = querySnapshot.docs.map((doc) => ({
+        console.log("Fetching movies...");
+        const moviesRef = collection(db, "Movies");
+        const querySnapshot = await getDocs(moviesRef);
+        const moviesData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
 
         if (isMounted) {
-          console.log("Fetched users:", usersData);
-          setUsers(usersData);
+          console.log("Fetched movies:", moviesData);
+          setMovies(moviesData);
         }
       } catch (error) {
-        console.error("Error fetching users:", error);
-        toast.error("Error fetching users.");
+        console.error("Error fetching movies:", error);
+        toast.error("Error fetching movies.");
       } finally {
         if (isMounted) setLoading(false);
       }
     };
 
-    fetchUsers();
+    fetchMovies();
 
     return () => {
       isMounted = false;
@@ -70,14 +70,14 @@ export default function Users() {
   }, []);
 
 
-  const handleDeleteUser = async (uid) => {
+  const handleDeleteMovie = async (id) => {
     try {
-      const userRef = doc(db, "Users", uid);
-      await deleteDoc(userRef);
-      setUsers(users.filter((user) => user.id !== uid));
-      toast.success("User deleted successfully.");
+      const movieRef = doc(db, "Movies", id);
+      await deleteDoc(movieRef);
+      setMovies(movies.filter((movie) => movie.id !== id));
+      toast.success("Movie deleted successfully.");
     } catch (error) {
-      toast.error("Error deleting user.");
+      toast.error("Error deleting movie.");
     }
   };
 
@@ -99,46 +99,44 @@ export default function Users() {
         {/* Sidebar */}
         <aside className="sidebar">
           <nav>
-            <Link to="/NewProduct" className="sidebar-link">Movie</Link>
+            <Link to="/NewMovie" className="sidebar-link">Add Movie</Link>
           </nav>
           <nav>
-            <Link to="/users" className="sidebar-link">Users</Link>
+            <Link to="/movies" className="sidebar-link">Movies</Link>
           </nav>
         </aside>
 
         {/* Main Content */}
         <main className="main-content">
-          <h1 className="page-title">User Management</h1>
+          <h1 className="page-title">Movie Management</h1>
           <div className="card-container">
             <Card>
               <CardHeader>
-                <CardTitle>Users</CardTitle>
+                <CardTitle>Movies</CardTitle>
               </CardHeader>
               <CardContent>
-                <table className="user-table">
+                <table className="movie-table">
                   <thead>
                     <tr>
-                      <th className="table-header">UID</th>
-                      <th className="table-header">Email</th>
+                      <th className="table-header">Movie Name</th>
                       <th className="table-header">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {loading ? (
                       <tr>
-                        <td colSpan={3} className="loading">Loading...</td>
+                        <td colSpan={2} className="loading">Loading...</td>
                       </tr>
-                    ) : users.length === 0 ? (
+                    ) : movies.length === 0 ? (
                       <tr>
-                        <td colSpan={3} className="loading">No users found.</td>
+                        <td colSpan={2} className="loading">No movies found.</td>
                       </tr>
                     ) : (
-                      users.map((user) => (
-                        <tr key={user.id}>
-                          <td className="table-cell">{user.id}</td>
-                          <td className="table-cell">{user.email}</td>
+                      movies.map((movie) => (
+                        <tr key={movie.id}>
+                          <td className="table-cell">{movie.name}</td>
                           <td className="table-cell">
-                            <Button variant="default" onClick={() => handleDeleteUser(user.id)}>
+                            <Button variant="default" onClick={() => handleDeleteMovie(movie.id)}>
                               Delete
                             </Button>
                           </td>
