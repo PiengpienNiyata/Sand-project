@@ -1,0 +1,56 @@
+/* Styles for the newProduct container */
+.newProduct {
+  flex: 4;
+  padding: 20px; /* Add padding to the container for better spacing */
+}
+
+/* Styles for the form */
+.addProductForm {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles for each form item */
+.addProductItem {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+/* Styles for labels inside form items */
+.addProductItem > label {
+  color: gray;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Styles for input fields inside form items */
+.addProductItem > input,
+.addProductItem > select {
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border to inputs and selects for better visibility */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  font-size: 14px; /* Ensure font size is readable */
+}
+
+/* Styles for the submit and upload buttons */
+.addProductButton {
+  height: 30px;
+  margin-top: 10px;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: darkblue;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+}
+
+/* Optional: Add hover effect for the button */
+.addProductButton:hover {
+  background-color: #003366; /* Darker shade of blue for hover effect */
+}

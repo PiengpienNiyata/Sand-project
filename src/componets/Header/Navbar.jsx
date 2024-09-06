@@ -110,6 +110,7 @@ function Navbar(props) {
                     >
                       My List
                     </Link>
+                    
                   </div>
                 </div>
               </div>
@@ -284,6 +285,12 @@ function Navbar(props) {
                   </Link>
 
                   <Link to={"/mylist"}>
+                    <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
+                      My-List
+                    </a>
+                  </Link>
+
+                  <Link to={"/Admin"}>
                     <a className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-green-800 hover:text-white">
                       My-List
                     </a>

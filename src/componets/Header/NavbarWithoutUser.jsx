@@ -32,17 +32,29 @@ function NavbarWithoutUser() {
           />
         </div>
 
-        <div>
+        <div className="flex space-x-4 mr-8">
           <Link to="/signin">
-            <button style={{ backgroundColor: '#2A6354' }}
-              className="px-8 rounded-sm py-2 text-white text-base font-bold mr-4 lg:mr-0">
+            <button
+              style={{ backgroundColor: '#2A6354' }}
+              className="px-8 rounded-sm py-2 text-white text-base font-bold"
+            >
               Login
+            </button>
+          </Link>
+
+          <Link to="/AdminSignIn">
+            <button
+              style={{ backgroundColor: '#2A6354' }}
+              className="px-8 rounded-sm py-2 text-white text-base font-bold"
+            >
+              Admin
             </button>
           </Link>
         </div>
       </header>
     </div>
   );
+
 }
 
 export default NavbarWithoutUser;
