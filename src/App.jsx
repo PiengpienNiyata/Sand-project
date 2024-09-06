@@ -16,6 +16,7 @@ const History = lazy(() => import("./Pages/History"));
 const Admin = lazy(() => import("./Pages/Admin"));
 const AdminSignIn = lazy(() => import("./Pages/AdminSignIn"));
 const NewProduct = lazy(() => import("./Pages/NewProduct"));
+const Users = lazy(() => import("./Pages/Users"));
 
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthContext } from "./Context/UserContext";
@@ -50,6 +51,7 @@ function App() {
               <Route path="/liked" element={<LikedMovies />} />
               <Route path="/history" element={<History />} />
               <Route path="/Admin" element={<Admin />} />
+              <Route path="/Users" element={<Users />} />
               <Route path="/NewProduct" element={<NewProduct />} />
               <Route path="/play/:id" element={<Play />} />
             </>
@@ -57,6 +59,7 @@ function App() {
           <Route path="/play/:id" element={<Play />} />
 
           <Route path="/AdminSignIn" element={<AdminSignIn />} />
+          
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<ErrorPage />} />

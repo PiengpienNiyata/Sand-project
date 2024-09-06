@@ -1,0 +1,129 @@
+/* Global container for the Users page */
+.users-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9fafb; /* Light background */
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #2a6354;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+  }
+  
+  .header a {
+    color: #d1d5db;
+    text-decoration: none;
+  }
+  
+  .header a:hover {
+    color: white;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 256px;
+    background-color: #374151;
+    color: white;
+    padding: 16px;
+    position: relative;
+    top: 64px;
+    height: calc(100vh - 64px);
+  }
+  
+  .sidebar a {
+    color: #d1d5db;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 16px;
+  }
+  
+  .sidebar a:hover {
+    color: #f3f4f6;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    margin-left: 256px;
+    padding: 16px;
+    padding-top: 80px; /* Offset for the fixed header */
+  }
+  
+  h1 {
+    font-size: 1.875rem; /* 2xl */
+    margin-bottom: 16px;
+    color: #111827;
+  }
+  
+  .table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb; /* Light border */
+  }
+  
+  table th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #4b5563;
+  }
+  
+  table tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .main-content {
+      margin-left: 0;
+      padding-top: 16px;
+    }
+  }
+  

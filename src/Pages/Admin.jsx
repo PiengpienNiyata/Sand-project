@@ -65,7 +65,7 @@ export default function Admin() {
             </div>
             <div className="flex items-center gap-2">
               <UsersIcon className="h-6 w-6" />
-              <Link className="hover:text-gray-300" to="/users">
+              <Link className="hover:text-gray-300" to="/Users">
                 Users
               </Link>
             </div>
