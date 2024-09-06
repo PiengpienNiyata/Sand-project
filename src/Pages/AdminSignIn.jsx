@@ -177,7 +177,7 @@ function SignIn() {
                     ></input>
                   </div>
                   <div>
-                    {ErrorMessage && (
+                    {/* {ErrorMessage && (
                       <h1 className="flex text-white font-bold p-4 bg-green-700 rounded text-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ function SignIn() {
                         </svg>
                         {ErrorMessage}
                       </h1>
-                    )}
+                    )} */}
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-start">
@@ -220,15 +220,14 @@ function SignIn() {
                   </div>
                   <button
                     type="submit"
-                    className={`w-full text-white ${
-                      loader
+                    className={`w-full text-white ${loader
                         ? `bg-stone-700`
                         : `bg-green-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-primary-300`
-                    } transition ease-in-out font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
+                      } transition ease-in-out font-medium rounded-sm text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800`}
                   >
                     {loader ? <ClipLoader color="#2A6354" /> : `Sign in`}
                   </button>
-                  
+
                 </form>
               </div>
             </div>
